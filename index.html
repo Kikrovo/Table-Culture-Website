@@ -12,29 +12,44 @@
 </head>
 <body>
   <header class="site-header">
-  <a class="logo" href="#" aria-label="Table Culture home">
-    <img src="Table Culture_logo_RGB.png" alt="Table Culture">
+   <div class="header-inner">
+
+    <nav class="nav nav-left">
+      <a href="#products">Explore Our World</a>
+      <div class="nav-dropdown">
+  <a href="#brand" class="dropdown-trigger">
+    Brands Who Trust Us <span class="nav-arrow">⌄</span>
   </a>
 
-  <button class="menu-toggle" aria-label="Open navigation">
-    ☰
-  </button>
+  <div class="dropdown-menu">
+    <a href="#brand">Atelier Thomas Bragard</a> <!-- Table Culture Couture, Gourmet and servicing to be added but not in dropdown -->
+    <a href="#">Garnier Thiebault</a>
+  </div>
+</div>
+    </nav>
 
-  <nav class="nav">
-    <a href="#products" class="products-link"> <!--STILL NEED TO ADD DROPDOWN MENU-->
-  Products <span class="nav-arrow">⌄</span>
-</a>
-    <a href="#brand">Brands</a>
-    <a href="#about">About</a>
-  </nav>
+    <a class="logo" href="#" aria-label="Table Culture home">
+      <img src="Table Culture_logo_RGB.png" alt="Table Culture">
+    </a>
 
-  <a class="quote-btn" href="#contact">Request a Quote</a>
+    <nav class="nav nav-right">
+      <a href="#contact">Let's Be In Touch</a>
+      <a href="#">Latest Collection</a>
+      <a href="#" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Open navigation">
+      ☰
+    </button>
+  </div>
 </header>
 
   <main>
     <section class="hero">
   <div class="hero-content">
-    <h1 style="margin-bottom: 55px;">
+    <h1>
       Everything Hospitality.<br>
       One Trusted Partner.
     </h1>
@@ -46,8 +61,43 @@
   </div>
 </section>
 
+    <section class="trust-banner">      <!-- ADD BRAND LOGOS LATER -->
+      <div class="trust-heading">
+        <p>They Trust Table Culture</p>
+      </div>
+
+      <div class="trust-marquee">
+        <div class="trust-track">
+
+          <div class="trust-group">
+            <div class="trust-item">Atelier Thomas Bragard</div>
+            <div class="trust-item">Garnier Thiebault</div>
+            <div class="trust-item">Table Culture Couture</div>
+            <div class="trust-item">Table Culture Gourmet</div>
+            <div class="trust-item">Atelier Thomas Bragard</div>
+            <div class="trust-item">Garnier Thiebault</div>
+            <div class="trust-item">Table Culture Couture</div>
+            <div class="trust-item">Table Culture Gourmet</div>
+            
+        </div>
+          
+          <!-- duplicated for seamless scrolling -->
+        <div class="trust-group" aria-hidden="true">
+          <div class="trust-item">Atelier Thomas Bragard</div>
+            <div class="trust-item">Garnier Thiebault</div>
+            <div class="trust-item">Table Culture Couture</div>
+            <div class="trust-item">Table Culture Gourmet</div>
+            <div class="trust-item">Atelier Thomas Bragard</div>
+            <div class="trust-item">Garnier Thiebault</div>
+            <div class="trust-item">Table Culture Couture</div>
+            <div class="trust-item">Table Culture Gourmet</div>
+        </div>
+        </div>
+      </div>
+    </section>
+
     <section id="products" class="section section-light categories">
-      <div class="section-grid">
+      <div class="section-grid reveal">
         <div>
           <p class="eyebrow dark">Our Categories</p>
           <h2>Professional Essentials<br>for Hospitality</h2>
@@ -56,7 +106,7 @@
   restaurants, hotels, and hospitality teams across the UAE.</p>
       </div>
 
-      <div class="card-grid">
+      <div class="card-grid reveal">
         <article class="category-card jacket">
           <div class="card-shade"></div>
           <div class="category-content">
@@ -86,7 +136,7 @@
     <section id="brand" class="section brand-section">
   <div class="brand-layout">
 
-    <div class="brand-heading">
+    <div class="brand-heading reveal">
       <p class="eyebrow dark">Featured Brand</p>
 
       <h2>Atelier Thomas Bragard</h2>
@@ -102,7 +152,7 @@
       </a>
     </div>
 
-    <div class="brand-details">
+    <div class="brand-details reveal">
       <p class="brand-origin">Est. 1757 — France</p>
 
       <div class="brand-points">
@@ -116,7 +166,7 @@
   </div>
 </section>
 
-    <section id="about" class="section section-light about">
+    <section id="about" class="section section-light about reveal">
       <p class="eyebrow dark">About Table Culture</p>
       <h2>Your Partner in Culinary Excellence</h2>
       <p>Founded in 2024, Table Culture has grown to become the premier distributor of professional chef uniforms in the United Arab Emirates and the wider GCC region.</p>
@@ -126,7 +176,7 @@
 
     <section id="contact" class="section contact">
   <div class="contact-copy">
-    <p class="eyebrow">Request a Quote</p>
+    <p class="eyebrow">Request a Quote</p>      <!-- MAKE SEPARATE PAGE -->
 
     <h2>Let's Work Together</h2>
 
