@@ -41,3 +41,48 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((element) => {
   revealObserver.observe(element);
 });
+
+const quoteForm = document.getElementById("quote-form");
+const formStatus = document.getElementById("form-status");
+
+quoteForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(quoteForm);
+
+    const quoteData = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        company: formData.get("company"),
+        message: formData.get("message")
+    };
+
+    formStatus.textContent = "Sending your request...";
+
+    try {
+        const response = await fetch("http://127.0.0.1:8000/api/quote", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(quoteData)
+        });
+
+        if (response.status === 429) {
+            formStatus.textContent =
+                "Too many requests. Please wait a minute before trying again.";
+            return;
+        }
+
+        if (!response.ok) {
+            throw new Error("Failed to submit quote request");
+}
+
+        formStatus.textContent = "Your request has been submitted successfully!";
+        quoteForm.reset();
+
+    } catch (error) {
+        console.error("Quote submission error:", error);
+        formStatus.textContent = "Something went wrong. Please try again.";
+    }
+});
