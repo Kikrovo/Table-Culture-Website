@@ -655,16 +655,16 @@ main {
 /* Garnier Thiebaut */
 
 .garnier-cover {
-  background: #0d1930;
+    background: transparent;
+    border-radius: 0;
 }
 
 .garnier-cover img {
-  display: block;
-  width: 38%;
-  height: auto;
-  max-height: 55%;
-  object-fit: contain;
-  transition: transform 0.35s ease;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .catalogue-cover img {
@@ -679,9 +679,6 @@ main {
   transform: scale(1.035);
 }
 
-.catalogue-card:hover .garnier-cover img {
-  transform: none;
-}
 
 /* Catalogue names */
 
@@ -1282,7 +1279,11 @@ h3 { font-size: clamp(2.2rem, 3vw, 3rem); }
     height: 350px;
   }
 
-  .garnier-cover img {
-    width: 60%;
-  }
+}
+@media (max-width: 700px) {
+    .garnier-cover img {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+    }
 }
